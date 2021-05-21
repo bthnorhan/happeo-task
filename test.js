@@ -1,7 +1,7 @@
 const client = require('./apiClient').default();
 // All requests should run at the same time and produce
 // only one requestto the backend. All requests should return or reject.
-async function runTest() {
+function runTest() {
 	const batchUrl = '/file-batch-api';
 	// Should return [{id:”fileid1”},{id:”fileid2”}]
 	client.get(batchUrl, { params: { ids: ['fileid1', 'fileid2'] } });
