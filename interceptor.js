@@ -7,4 +7,5 @@ function batchInterceptor(instance) {
 		(error) => Promise.reject(error),
 	);
 }
-export default batchInterceptor;
+
+exports.default = batchInterceptor;

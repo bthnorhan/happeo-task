@@ -1,5 +1,5 @@
-import axios from 'axios';
-import batchInterceptor from './interceptor';
+const axios = require('axios').default;
+const batchInterceptor = require('./interceptor').default;
 
 const client = () => {
 	const config = {
@@ -9,7 +9,8 @@ const client = () => {
 	};
 
 	const instance = axios.create(config);
-	addInterceptor(instance);
+	batchInterceptor(instance);
 	return instance;
 };
-export default client;
+
+exports.default = client;
