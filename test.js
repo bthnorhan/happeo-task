@@ -7,7 +7,7 @@ async function runTest() {
 	client.get(batchUrl, { params: { ids: ['fileid1', 'fileid2'] } });
 	// Should return [{id:”fileid2”}]
 	client.get(batchUrl, { params: { ids: ['fileid2'] } });
-	// Should reject as the fileid3 is missing from theresponse
+	// Should reject as the fileid3 is missing from the response
 	client.get(batchUrl, { params: { ids: ['fileid3'] } });
 }
 
