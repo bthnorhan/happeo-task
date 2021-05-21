@@ -4,4 +4,4 @@
 
 Run the code snippet below to test the code in your terminal.
 
-    npm start
+    npm test
